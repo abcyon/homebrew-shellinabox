@@ -21,6 +21,7 @@ class Shellinabox < Formula
            "--disable-dependency-tracking",
            "--disable-silent-rules",
            "--disable-runtime-loading",
+           "--disable-pam",
            "--prefix=#{prefix}",
            "--mandir=#{man}",
            "--sysconfdir=#{etc}"
