@@ -6,8 +6,7 @@ macOS용 [shellinabox](https://github.com/abcyon/shellinabox) Homebrew tap.
 ## 설치
 
 ```bash
-brew tap abcyon/shellinabox
-brew install shellinabox
+brew install abcyon/shellinabox/shellinabox
 ```
 
 ## 서비스 관리
@@ -51,7 +50,7 @@ open ~/Library/LaunchAgents/homebrew.mxcl.shellinabox.plist
 
 ```bash
 brew services stop abcyon/shellinabox/shellinabox
-brew uninstall shellinabox
+brew uninstall abcyon/shellinabox/shellinabox
 brew untap abcyon/shellinabox
 ```
 
