@@ -30,13 +30,13 @@ class Shellinabox < Formula
   end
 
   service do
-    run [opt_sbin/"shellinaboxd", "--port=4200", "--no-beep"]
+    run [opt_bin/"shellinaboxd", "--port=4200", "--no-beep", "-t"]
     keep_alive true
     log_path var/"log/shellinabox.log"
     error_log_path var/"log/shellinabox.log"
   end
 
   test do
-    system "#{sbin}/shellinaboxd", "--help"
+    system "#{bin}/shellinaboxd", "--help"
   end
 end
