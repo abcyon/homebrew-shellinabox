@@ -9,11 +9,14 @@ class Shellinabox < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
+  depends_on "openssl@3"
 
   def install
+    openssl = Formula["openssl@3"]
     system "autoreconf", "-fiv"
     system "./configure",
-           "CFLAGS=-D_DARWIN_C_SOURCE -Os",
+           "CFLAGS=-D_DARWIN_C_SOURCE -Os -I#{openssl.opt_include}",
+           "LDFLAGS=-L#{openssl.opt_lib}",
            "--disable-debug",
            "--disable-dependency-tracking",
            "--disable-silent-rules",
