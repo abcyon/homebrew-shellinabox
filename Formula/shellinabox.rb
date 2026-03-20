@@ -20,6 +20,7 @@ class Shellinabox < Formula
            "--disable-debug",
            "--disable-dependency-tracking",
            "--disable-silent-rules",
+           "--disable-runtime-loading",
            "--prefix=#{prefix}",
            "--mandir=#{man}",
            "--sysconfdir=#{etc}"
