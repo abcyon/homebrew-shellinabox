@@ -13,7 +13,7 @@ class Shellinabox < Formula
   def install
     system "autoreconf", "-fiv"
     system "./configure",
-           "CFLAGS=-D_DARWIN_C_SOURCE #{ENV.optflags}",
+           "CFLAGS=-D_DARWIN_C_SOURCE -Os",
            "--disable-debug",
            "--disable-dependency-tracking",
            "--disable-silent-rules",
